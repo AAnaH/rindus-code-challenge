@@ -32,6 +32,8 @@ my-spring-boot-app
 ├── mvnw.cmd
 ├── pom.xml
 ├── redis-init.sh
+├── Dockerfile
+├── docker-compose.yml
 └── README.md
 ```
 
@@ -74,6 +76,17 @@ To run and test this application, you need to have the following installed:
      "deviceExtType": "tablet"
    }' http://localhost:8080/bid
    ```
+
+### Dockerization
+   ***Build the Application:*** First, ensure your application is built. You can do this by running the following command in the root directory of your project:
+   ```sh
+   ./mvnw clean package
+   ```
+   ***Build and Run the Containers:*** Then, build and run the Docker containers using Docker Compose:
+   ```sh
+   docker-compose up --build
+   ```
+   ***Verify the Application:*** Once the containers are running, you can verify that the application is working correctly by accessing http://localhost:8080/hello and making a test request.
 
 ## 📦 Dependencies
 
